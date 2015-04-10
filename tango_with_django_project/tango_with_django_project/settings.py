@@ -26,7 +26,25 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# create a dynamically constructed path to our templates
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
+
+# template directories
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    TEMPLATE_PATH,
+)
+
+STATIC_PATH = os.path.join(BASE_DIR,'static')
+
+STATIC_URL = '/static/' # You may find this is already defined as such.
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
 # Application definition
 
 INSTALLED_APPS = (
